@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Wants Extra Baggage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediksi Wants Extra Baggage</h1>
+
+        <form method="POST" action="/">
+            <label for="sales_channel">Sales Channel:</label>
+            <select id="sales_channel" name="sales_channel">
+                <option value="Internet">Internet</option>
+                <option value="Mobile">Mobile</option>
+            </select>
+
+            <label for="trip_type">Trip Type:</label>
+            <select id="trip_type" name="trip_type">
+                <option value="RoundTrip">RoundTrip</option>
+                <option value="OneWay">OneWay</option>
+                <option value="CircleTrip">CircleTrip</option>
+            </select>
+
+            <label for="flight_day">Flight Day:</label>
+            <select id="flight_day" name="flight_day">
+                <option value="Mon">Senin</option>
+                <option value="Tue">Selasa</option>
+                <option value="Wed">Rabu</option>
+                <option value="Thu">Kamis</option>
+                <option value="Fri">Jumat</option>
+                <option value="Sat">Sabtu</option>
+                <option value="Sun">Minggu</option>
+            </select>
+
+            <label for="route">Route:</label>
+            <input type="text" id="route" name="route">
+
+            <label for="booking_origin">Booking Origin:</label>
+            <input type="text" id="booking_origin" name="booking_origin">
+
+            <label for="num_passengers">Number of Passengers:</label>
+            <input type="number" id="num_passengers" name="num_passengers" value="1">
+
+            <label for="purchase_lead">Purchase Lead (days):</label>
+            <input type="number" id="purchase_lead" name="purchase_lead" value="0">
+
+            <label for="length_of_stay">Length of Stay (days):</label>
+            <input type="number" id="length_of_stay" name="length_of_stay" value="0">
+
+            <label for="flight_hour">Flight Hour (0-23):</label>
+            <input type="number" id="flight_hour" name="flight_hour" value="0">
+
+            <label for="wants_preferred_seat">Wants Preferred Seat:</label>
+            <select id="wants_preferred_seat" name="wants_preferred_seat">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="wants_in_flight_meals">Wants In-flight Meals:</label>
+            <select id="wants_in_flight_meals" name="wants_in_flight_meals">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit">Prediksi</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

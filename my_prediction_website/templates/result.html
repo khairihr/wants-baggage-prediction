@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Hasil Prediksi</h2>
+
+        <div class="result">
+            <p>Berdasarkan input yang diberikan, model <b>{{ model }}</b> memprediksi bahwa penumpang ini memiliki kemungkinan sebesar <b>{{ (prediction * 100)|round(1) }}%</b> untuk <b>{{ wants_baggage }}</b>.</p>
+        </div>
+
+        <a href="/">Kembali ke Halaman Utama</a>
+    </div>
+</body>
+</html>
